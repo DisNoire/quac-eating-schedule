@@ -19,7 +19,7 @@ public class MessageScheduleService {
     @Autowired
     private BotService botService;
 
-    @Scheduled(cron = "${cron.expression}", zone = "${cron.zone}")
+    @Scheduled(cron = "${expression}", zone = "${zone}")
     private void postMessageOnTime() {
         botService.postMessage(channelId, message);
     }
