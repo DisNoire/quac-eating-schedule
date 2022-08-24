@@ -19,7 +19,7 @@ public class BotService {
                 .ofType(MessageChannel.class)
                 .flatMap(channel -> channel.createMessage(message))
                 .subscribe();
-        log.info(String.format("Message {0} sent to channel {1}", message, channelId));
+        log.info(String.format("Message %s sent to channel %s", message, channelId));
     }
 
 }
